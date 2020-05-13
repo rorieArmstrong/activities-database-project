@@ -11,6 +11,11 @@ function getAll() {
   function getSingle(activityId) {
     return Activities().where('id', parseInt(activityId)).first();
   }
+
+  
+  function get(x) {
+    return Activities().select().where('id', '<=', x);
+  }
   
   function add(activity) {
     return Activities().insert(activity, 'id');
@@ -27,6 +32,7 @@ function getAll() {
   module.exports = {
     getAll: getAll,
     getSingle: getSingle,
+    get: get,
     add: add,
     update: update,
     deleteItem: deleteItem

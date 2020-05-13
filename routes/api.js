@@ -23,6 +23,17 @@ router.get('/:id', (req, res, next) => {
     });
   });
 
+// GET a the first X activities
+router.get('/select/:X', (req, res, next) => {
+  db.get(req.params.X)
+  .then(function(show) {
+    res.status(200).json(show);
+  })
+  .catch(function(error) {
+    next(error);
+  });
+});
+
 // add activity 
 router.post('/activity', (req, res, next) => {
     db.add(req.body)
