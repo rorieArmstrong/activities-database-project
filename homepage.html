@@ -1,0 +1,42 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body{
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            color: #366c6c;
+        } 
+            
+        button { 
+            background-color: #457d7e; 
+            color: white; 
+            padding: 14px 20px; 
+            margin: 8px 0; 
+            border: none; 
+            cursor: pointer; 
+            width: 100%; 
+        }
+            
+        .container { 
+            padding: 16px;
+            border: 3px solid #42a680;
+            background-color: 	#a8e999;
+        }
+    </style>
+</head>
+
+<body> 
+    <div class="container"> 
+        
+        <h1>Welcome to the activities api for London</h1>
+
+        <button onclick="window.location.href = 'http://localhost:8000/form';">Add a new entry</button>
+        
+        <button onclick="window.location.href = 'http://localhost:8000/api/1';">View the first entry</button> 
+
+        <button onclick="window.location.href = 'http://localhost:8000/api/all';">View all entries</button>  
+    </div> 
+</body>
